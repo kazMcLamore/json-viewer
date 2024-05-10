@@ -6,11 +6,45 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<script type='module' src="https://cdn.jsdelivr.net/gh/kazMcLamore/json-viewer@main/components/FxJsonObject.js"></script>
 	<script type='module' src="https://cdn.jsdelivr.net/gh/kazMcLamore/json-viewer@main/components/FileMaker.js"></script>
+<style>
+	fx-json-object {
+		--font-family: 'Courier New', Courier, monospace;
+		--font-size: 14px;
+	}
+</style>
 </head>
 
 <body>
 	<script>
-		
+
+			function loadJson(json) {
+				if (typeof json === 'string') {
+					json = JSON.parse(json);
+				}
+
+				const jsonViewer = document.createElement('fx-json-object');
+				jsonViewer.json = json;
+				document.body.appendChild(jsonViewer);
+			}
+
+			const json = {
+				"key": "value",
+				"key2": "value2",
+				"key3": {
+					"key4": "value4",
+					"key5": "value5",
+					"key6": {
+						"key7": "value7",
+						"key8": "value8"
+					}
+				}
+			};
+
+			window.onload = () => {
+				console.log('test')
+				loadJson(JSON.stringify(json));
+			};
+
 	</script>
 </body>
 
