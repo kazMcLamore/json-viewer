@@ -39,10 +39,13 @@ export class FxJsonObject extends LitElement {
 			width: 100%;
 		}
 
-		fx-json-object.expand {
-			margin-left: 1rem;
+		fx-json-object {
 			font-size: var(--font-size);
 			font-family: var(--font-family);
+		}
+
+		fx-json-object.expand {
+			margin-left: 1rem;
 		}
 
 
