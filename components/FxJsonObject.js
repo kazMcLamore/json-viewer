@@ -40,8 +40,8 @@ export class FxJsonObject extends LitElement {
 		}
 
 		fx-json-object {
-			font-size: var(--font-size);
-			font-family: var(--font-family);
+			--font-size: var(--font-size);
+			--font-family: var(--font-family);
 		}
 
 		fx-json-object.expand {
@@ -69,6 +69,8 @@ export class FxJsonObject extends LitElement {
 		fx-json-attribute {
 			display: inline-block;
 			width: 100%;
+			font-size: var(--font-size);
+			font-family: var(--font-family);
 		}
 
 
